@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paper Rust</title>
+	<meta rel="charset" type="utf-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142116261-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142116261-2');
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta prefix="og: http://ogp.me/ns#" property="og:title" content="Paper Rust"/>
+	<meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+	<meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://paperrust.herokuapp.com/main" />
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="http://paperrust.herokuapp.com/eveningSorrow2.png"/>
+	<meta prefix="og: http://ogp.me/ns#" property="og:description" content="An interactive Web Gallery. Made by auriel klasovsky, this art form was inspired be the grate Peka Henich. The dream in to create an infinitude of pics of art that will generate itself continually. This dream could not have been achieved by Peka, but it may be achieved by all of us today, with computer art." />
+	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	<meta name="author" content="Auriel Klasovsky">
+	<link rel="stylesheet" href="/style/style.css"/>
+	<link rel="stylesheet" href="/ranger/ranger.css"/>
+	<link rel="stylesheet" href="/style/grid.css"/>
+	<link rel="stylesheet" href="/style/display.css"/>
+	<link rel="stylesheet" href="/style/playButton.css"/>
+	<link rel="stylesheet" href="./platter/platter.css"/>
+	<link rel="stylesheet" href="./platter/tray.css"/>
+	
+	<script src="/script/page.js"></script>
+	<script src="/script/jquery.min.js"></script>
+	<script src="/script/paper-full.min.js"></script>
+	<script defer src="/ranger/ranger.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Assistant|Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="grid main">
+	<div onclick="page('main')" class="return_arrow mandaloop eyeofmetatron about"></div>
+	<div onclick="page('mandaloop')" class="return_arrow color"></div>
+	<h1 class="main about">Paper Rust</h1>
+	<h2 class="about_button about main" onclick="page('about')">About</h2>
+	<p class="about">
+		<span>Hey, I am</span><a href="https://www.linkedin.com/in/auriel-klasovsky/">Auriel Klasovsky</a><span>, a mathematically oriented programmer. All great ideas must pass through paper to survive the rediating decay of day and night, But even papers rust. However, it is my belife that electronic data have a grater chance of escaping mortality (if the gods be with it). I made these interactive animations using paperjs jquery and the good old javascript, Html and Css stack.  The website was designed by the briliant</span><a href="https://www.linkedin.com/in/dor-levin/">Dor Levin</a>. Hope you like it.</span>
+	</p>
+	<h2 class="mandaloop main">Mandaloop</h2>
+	
+	<div onclick="page('mandaloop')" class="animation mandaloop main">
+		<canvas id="mandaloop" resize></canvas>
+		<script src="animation/mandaloop.js"></script>
+		<script src="animation/mandaloop_controller.js"></script>
+	</div>
+	<p class="main">Mandaloop is about recurrent ratios within Regular shapes. Softly changing through time. Sinking and rising with the waves of an invisible clock.</p>
+	<a class="main m_link" onclick="page('mandaloop')" >Click to play</a>	
+	
+	<div onclick="page('eyeofmetatron')" class="animation eyeofmetatron main">
+        	<canvas id="eyeofmetatron" resize></canvas>
+        	<script type="text/javascript" src="animation/eom.js"></script>
+        	<script type="text/javascript" src="animation/eom_controller.js"></script>
+	</div>
+	<h2 class="eyeofmetatron main">Eye of Metatron</h2>
+
+	<p class="main">Eye of metatron is a window to the world of whole numbers and frequencies. It encourage you to dive into the modulus space and discover its symmetries. </p>
+	<a class="main e_link" onclick="page('eyeofmetatron')" class="main" >Click to play</a>	
+
+	<div id='speed' class="eyeofmetatron ranger" val="30"></div>
+	<div id='shapeAmount' class="eyeofmetatron ranger" val="40"></div>
+	<div id='seed' class="eyeofmetatron ranger" val="40"></div>
+	<div id='angle' class="eyeofmetatron ranger" val="0"></div>
+	<div id='radious' class="eyeofmetatron ranger" val="20"></div>
+	<div id='colorAmount' class="eyeofmetatron ranger" val="30"></div>
+	<div id='colorPointer' class="eyeofmetatron ranger" val="60"></div>
+	<div id='width' class="eyeofmetatron ranger" val="50"></div>
+
+	<p class="mandaloop">Cup</p>
+	<div id="mandaspeed" class="mandaloop ranger" val="30"></div>
+	<p class="mandaloop">Coin</p>
+	<div id="buffer" class="mandaloop ranger" val="15"></div>
+	<p class="mandaloop">Wand</p>
+	<div id="sides" class="mandaloop ranger" val="20"></div>
+	<p class="mandaloop">Sword</p>
+	<div id="depth" class="mandaloop ranger" val="11"></div>
+	<a class="mandaloop" onclick="page('color')">Play with the color</a>
+
+	
+	<script src="./platter/color.js"></script>
+	<script defer src="./platter/platter.js"></script>
+	<script defer src="./platter/tray.js"></script>
+	<div class="color container">
+		<div class='platter'>
+			<img class="hue" src="./platter/hue.png"></img>	
+			<div class="white_fill"></div>
+			<div class="current_color"></div>
+		</div>
+	</div>
+	<div class="color lightness_pointer"></div>
+	<div class="color lightness"></div>
+	<div class="color saturation_pointer"></div>
+	<div class="color saturation"></div>
+	<p class="color">Current Colors</p>
+	<div class="color trayjs"></div>
+	<div class="color flex">
+		<a onclick="trayjs.insert(platter.current())" class="add">Add color</a>
+		<a onclick="trayjs.remove()" class="remove">Remove</a>
+	</div>
+	<a class="color" onclick="page('mandaloop')">Play with the shape</a>
+</div>
+</body>
+</html>

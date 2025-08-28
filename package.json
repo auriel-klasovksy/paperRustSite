@@ -1,0 +1,16 @@
+{
+  "name": "paperrust",
+  "version": "1.1.0",
+  "description": "this is an art gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "auriel klasovsky",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "googleapis": "^51.0.0"
+  }
+}

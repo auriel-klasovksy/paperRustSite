@@ -1,0 +1,159 @@
+*	{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: auto;
+	--main-mobile-width: 800px;
+	--main-black-color: #111;
+	--main-gray-color: #6b666c;
+	--main-softgray-color: #97969b;
+	--main-softergray-color: #c8c8c8;
+	--dors-background: #FFF;
+	--dors-text: #3f3f3f;
+	--dors-link: #16816B;
+	font-family: 'Assistant', sans-serif;
+	font-family: 'Merriweather', serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	overflow: visible;
+} 
+span, p	{
+	margin:0;
+	padding:0;
+	font-family: 'Assistant', sans-serif;
+}
+.color > a	{
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+.flex	{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+body	{
+	background-color: #FFF;
+	padding: 2em;
+	padding-top:0;
+}
+
+h1, h2, h3 {
+	color: var(--dors-text);
+	font-family: 'Merriweather', serif;
+}
+h2, h3	{
+	font-size: 2em;
+	padding-top: 1em;
+}
+a	{
+	color: var(--dors-link);
+	text-decoration: underline;
+	cursor: pointer;
+	padding-bottom:1em;
+	padding-top:1em;
+}
+h1 {
+	font-size: 3em;
+	padding: 0;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}	
+.about > h1	{
+	padding-bottom: 0;
+}
+p	{
+	color: var(--dors-text);
+}
+p.main	{
+	padding-bottom: 3em;
+}
+
+canvas	{
+	width: 70vw;
+	height: 70vw;
+}
+.about_button	{
+	cursor: pointer;
+	font-size: 2em;
+}
+
+.about > .about_button	{
+	font-size: 1.5em;
+	padding: 1.3em;
+}
+
+.return_arrow	{
+	display: block;
+	content: url('/arrow_small.png');
+	position:absolute;
+	left: 0;
+	top: 2em;
+	-webkit-transform: scale(-0.5);
+	transform: scale(-0.5);
+	padding: 0.2em;
+	padding-top: 0.1em;
+	border-width:0;
+	cursor: pointer;
+}
+input[type=range]	{
+	overflow: visible;
+}
+
+@media only screen and (min-width: 800px) {
+p,a, h1,h2,h3,canvas	{
+padding: 0.4em;
+}
+canvas	{
+	padding-top:2em;
+	width:95%;
+	height:95%;
+}
+p.main	{
+	padding-bottom: 0;
+	margin-bottom: 0;
+	text-align: left;
+}
+a.main, p.main	{
+	text-align: left;
+	margin-left: 50px;
+}
+.about > a {
+	color: var(--dors-text);
+	text-decoration: none;
+}
+p.about	{
+	text-align: left;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+p.mandaloop	{
+	font-family: 'Merriweather', serif;
+	text-align: left;
+	padding-left: 0px;
+}
+h1.main	{
+	margin-left:0;
+	padding-left:0;
+	padding-bottom: 0.5em;
+	text-align: left;
+	width: 3.5em;
+}
+.main > h2	{
+	padding-top:0
+}
+.mandaloop > h2, .eyeofmetatron > h2	{
+	padding-top:1em;
+	padding-left:2em;
+	text-align: left;
+}
+.mandaloop > a, .color > a	{
+	font-size:1.5em;
+	margin-top:1em;
+}
+.color > a {
+	font-size: 1.2em;
+	margin: 5px;
+	padding: 0px;
+}
+
+}

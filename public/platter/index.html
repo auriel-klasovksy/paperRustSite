@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8"/>
+		<script src="../script/jquery.min.js"></script>
+</head>
+<body>
+	<script src="./color.js"></script>
+	<script defer src="./platter.js"></script>
+	<script defer src="./tray.js"></script>
+	<link rel="stylesheet" href="./platter.css"/>
+	<link rel="stylesheet" href="./tray.css"/>
+	<div class="color container">
+		<div class='platter'>
+			<img class="hue" src="./hue.png"></img>	
+			<div class="white_fill"></div>
+			<div class="current_color"></div>
+		</div>
+		<div class="lightness_pointer"></div>
+		<div class="lightness"></div>
+		<div class="saturation_pointer"></div>
+		<div class="saturation"></div>
+		<p class="color">Current Colors</p>
+		<div class="color trayjs"></div>
+		<div class="color flex">
+			<a onclick="trayjs.insert(platter.current())" class="add">Add color</a>
+			<a onclick="trayjs.remove()" class="remove">Remove</a>
+		</div>
+	</div>
+</body>
+<script></script>
+</html>

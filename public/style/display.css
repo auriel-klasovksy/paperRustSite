@@ -1,0 +1,35 @@
+.grid >  *	{
+	display: none;
+}
+.main > .main	{
+	display: block;
+}
+
+.mandaloop > .mandaloop	{
+	display: block;
+}
+
+.eyeofmetatron> .eyeofmetatron	{
+	display: block;
+}
+.about > .about	{
+	display:block;
+}
+.color > .color	{
+	display:block;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+.main > p.about	{
+	display: block;
+}
+.main > .about_button	{
+	display: none;
+}
+.color > .animation.mandaloop, .color > h2.mandaloop {
+	display: block;
+}
+
+}

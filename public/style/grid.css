@@ -1,0 +1,90 @@
+.grid	{
+	display:grid;
+	overflow: visible;
+}
+.main.about_button	{
+	grid-row: 11 / 12;
+}
+.main.h1	{
+	grid-row: 1/2;
+}
+.m_link	{
+	grid-row: 4 / 5;
+}
+.e_link	{
+	grid-row: 8 / 9;
+}
+h2.mandaloop	{
+	grid-row: 3/4
+}
+.mandaloop > h2	{
+	grid-row: 1/2;
+}
+.eyeofmetatron > h2	{
+	grid-row: 1/2;
+}
+
+.about > .about_button	{
+	grid-row: 2 / 3;
+}
+
+@media only screen and (min-width: 800px) {
+
+	.grid.main	{
+		grid-template-columns: minmax(200px, 240px) 2fr 2fr;
+		grid-template-rows: 170px 40vh
+	}
+	.grid.mandaloop, .grid.eyeofmetatron, .grid.color	{
+		grid-template-columns: 3fr 1fr;
+	}
+	.grid.mandaloop, .grid.eyeofmetatron	{
+		grid-template-rows: 20vh repeat( 10, 7vh);
+	}
+	.grid.color	{
+		grid-template-rows: 5vh minmax(21vw, 34vh) 5vh 5vh 5vh 23vh 5vh 5vh;
+	}
+	.grid.color > .animation {
+		grid-row: 2/9;
+	}
+	.main > .animation.main	{
+		grid-row: 1 / 3;
+	}
+	.main > .animation.mandaloop	{
+		grid-column: 2/3;
+	}
+	.main > .animation.eyeofmetatron	{
+		grid-column: 3/4;
+	}
+	h2.main	{
+		grid-row: 3/4;
+	}
+	p.main	{
+		grid-row: 4/5;
+	}
+	a.main	{
+		grid-row: 5/6;
+	}
+	a.mandaloop	{
+		grid-row: -3 / -1;
+	}
+	.main > h2.mandaloop	{
+		grid-column: 2/3;
+	}
+	.main > h2.eyeofmetatron	{
+		grid-column: 3/4;
+	}
+	p.about	{
+		grid-row: 2/7;
+	}
+	.mandaloop > *, .eyeofmetatron > *	{
+		grid-column: 2/3;
+	}
+	.color > h2,.mandaloop > h2, .eyeofmetatron > h2	{
+		grid-row: 1/2;
+		grid-column: 1/3;
+	}
+	.color > .animation, .mandaloop > .animation, .eyeofmetatron > .animation	{
+		grid-row: 2/12;
+		grid-column: 1/2;
+	}
+}

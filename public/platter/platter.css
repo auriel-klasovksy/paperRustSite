@@ -1,0 +1,57 @@
+.platter	{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+.hue, .white_fill, .current_color	{
+	position: absolute;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-moz-user-drag: none; 
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-ms-user-drag: none; 
+}
+.white_fill	{
+	background-color: white;
+	pointer-events: none;
+	cursor:pointer;
+}
+.hue	{
+	cursor:pointer;
+}
+.lightness, .saturation	{
+	height: 90%;
+	width: 90%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	border-radius:20px;
+	margin-top:10px;
+	cursor:pointer;
+}
+.lightness	{
+	background-image: linear-gradient(to right, hsl(100, 100%, 0%), hsl(100, 100%, 50%), hsl(100, 100%, 100%))
+}
+.saturation	{
+	background-image: linear-gradient(to right, hsl(100, 0%, 100%), hsl(100, 50%, 100%), hsl(100, 100%, 100%))
+}
+.lightness_pointer, .saturation_pointer	{
+	position: absolute;
+	pointer-events: none;
+	height:	30px;
+	width: 30px;
+	border-radius: 30px;
+	background-color:white;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	cursor: pointer;
+}
+
+.container	{
+	width: 100%;
+}

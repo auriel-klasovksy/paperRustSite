@@ -1,0 +1,18 @@
+.trayjs	{
+	overflow: visible;
+}
+.tray_color	{
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	margin: 5px;
+	border-color: #333;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+}
+.tray_color.selected	{
+	border-color:black;
+	border-width: 3px;
+}

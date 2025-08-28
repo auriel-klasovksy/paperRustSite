@@ -1,0 +1,66 @@
+<html>
+<head>
+	<script src="/script/paper-full.min.js"></script>
+	<script src="/script/jquery.min.js"></script>
+<style>
+	body	{
+		display: flex;
+	}
+	canvas	{
+		width: 40vw;
+		height:	90vh;
+		border-width: 3px;
+		border-color: black;
+		border-style: solid;
+	}
+	#canvas_one	{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<canvas id="canvas_one" resize></canvas>
+	<canvas id="canvas_two" resize></canvas>
+	<br>
+	<button onclick="toggleDisplay()"></button>
+</body>
+<script>
+	paper.activate()
+	var p1 = new paper.Project("canvas_one")
+	var c1 = $("#canvas_one")
+	var p2 = new paper.Project("canvas_two")
+	var c2 = $("#canvas_two")
+	function set1()	{
+		c1[0].width = c1[0].offsetWidth
+		c1[0].height = c1[0].offsetHeight
+		shape1.position= p1.view.center
+		
+	}
+	function create1()	{
+		p1 = new paper.Project("canvas_one")
+		shape1 = new paper.Path.Rectangle(p1.view.center, 50)
+		shape1.strokeColor = 'red'
+		p1.view.on('frame', _ => {
+			shape1.rotate(2, p1.view.center)
+		})
+		p1.view.on('resize', set1)
+	}
+	create1()
+	p2.activate()
+	var shape2 = new paper.Path.Rectangle(p2.view.center, 50)
+	shape2.strokeColor = 'blue'
+	p2.view.on('frame', _ => {
+		shape2.rotate(1, [220,230])
+	})
+	function toggleDisplay()	{
+		if(c1.css('display') == 'none')	{
+			c1.css('display', 'block')
+			create1()
+		}
+		else	{
+			c1.css('display', 'none')
+			p1.remove()
+		}
+	}
+</script>
+</html>

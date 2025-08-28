@@ -1,0 +1,18 @@
+
+.playButton::after	{
+	display:block;
+	height: 90px;
+	width: 90px;
+	content: url('/tick3.png');
+	margin:auto;
+	padding-top:2em;
+	text-align:center;
+	cursor: pointer;
+}
+.playButton	{
+	overflow: visible;
+}
+p.color	{
+	text-align:left;
+	margin-left:1em;
+}
